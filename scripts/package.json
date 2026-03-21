@@ -1,0 +1,14 @@
+{
+  "name": "hitokoto-collector",
+  "version": "1.0.0",
+  "description": "JPX適時開示情報収集スクリプト",
+  "type": "module",
+  "scripts": {
+    "collect": "node collect.js",
+    "test": "node collect.js --dry-run"
+  },
+  "dependencies": {
+    "fast-xml-parser": "^4.4.1",
+    "node-fetch": "^3.3.2"
+  }
+}

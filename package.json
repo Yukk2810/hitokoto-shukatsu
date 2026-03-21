@@ -1,0 +1,12 @@
+{
+  "name": "hitokoto-shukatsu",
+  "version": "1.0.0",
+  "description": "ひとこと就活 — 企業との出会い系",
+  "scripts": {
+    "dev": "netlify dev",
+    "build": "echo 'Static site - no build step required'"
+  },
+  "devDependencies": {
+    "netlify-cli": "^17.0.0"
+  }
+}

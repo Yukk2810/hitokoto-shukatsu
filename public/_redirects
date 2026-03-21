@@ -1,0 +1,6 @@
+# Netlify Functions を /api/* にマップ
+/api/companies   /.netlify/functions/companies   200
+/api/industries  /.netlify/functions/industries  200
+
+# SPA fallback（将来のルーティング拡張用）
+/*               /index.html                     200
