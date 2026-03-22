@@ -3,8 +3,6 @@ name: JPX開示情報収集
 on:
   schedule:
     - cron: '0 0-9 * * 1-5'
-    - cron: '50 23 * * 0-4'
-    - cron: '30 6 * * 1-5'
   workflow_dispatch:
 
 jobs:
@@ -16,15 +14,11 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 1
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-          cache: 'npm'
-          cache-dependency-path: scripts/package.json
 
       - name: Install dependencies
         working-directory: scripts
@@ -32,8 +26,6 @@ jobs:
 
       - name: Run collector
         working-directory: scripts
-        env:
-          FORCE_FULL: ${{ github.event.inputs.force_full }}
         run: node collect.js
 
       - name: Commit and push if changed
